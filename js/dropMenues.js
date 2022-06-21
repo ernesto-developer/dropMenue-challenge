@@ -6,6 +6,10 @@ const arrowCompany = document.querySelector('.navBar__element--arrowCompany');
 const registerMenu = document.querySelector('.registerYLoginBar');
 const navbar = document.querySelector('.navBar');
 const nav = document.getElementsByTagName('nav') [0]; ;
+const imgLogo = document.querySelector(".navBar--logo");
+
+const imgAside = document.querySelector(".imgAside--img");
+
 
  window.addEventListener('click', function(e){
         for(let i = 0; i < e.path.length; i++){
@@ -35,16 +39,27 @@ const nav = document.getElementsByTagName('nav') [0]; ;
 
 
 window.addEventListener('resize', function(){
-    if(window.innerWidth < 732){
+    if(window.innerWidth < 900){
        navbar.appendChild(registerMenu);
+       imgAside.setAttribute("src", "images/image-hero-mobile.png");
+       nav.appendChild(imgLogo);
     }else{
         nav.appendChild(registerMenu);
+        imgAside.setAttribute("src", "images/image-hero-desktop.png");
+        navbar.appendChild(imgLogo);
     }
+    
+    
     
 })
 
-if(window.innerWidth < 732){
+if(window.innerWidth < 900){
     navbar.appendChild(registerMenu);
+    nav.appendChild(imgLogo);
+    imgAside.setAttribute("src", "images/image-hero-mobile.png");
 }else{
     nav.appendChild(registerMenu);
+    imgAside.setAttribute("src", "images/image-hero-desktop.png");
+    navbar.appendChild(imgLogo);
 }
+
