@@ -1,0 +1,336 @@
+body{
+    padding: 3%;
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.6s;
+}
+header{
+    display: initial;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    align-items: center;
+}
+.navBar--logo{
+    margin-top: 6px;
+    margin-right: 20px;
+}
+.navBar__elements{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    font-weight: 700;
+}
+.navBar__elements:hover{
+    color: rgb(0, 0, 0);
+}
+.navBar__elements--element{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.navBar__element--text{
+    margin-right: 10px;
+}
+.navBar__element--arrow{
+    height: 7px;
+    width: 10px;
+}
+.navBar__element--dropMenuFeatures{
+
+    position: absolute;
+    display: none;
+    top: 5em;
+    padding: 10px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    left: 11%;
+    background-color: #fff;
+
+}
+.navBar__element--dropMenuCompany{
+
+    position: absolute;
+    display: none;
+    top: 5em;
+    padding: 10px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    left: 24%;
+    background-color: #fff;
+
+}
+a{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 3px;
+   
+}
+a:hover{
+    background-color: rgba(98, 213, 223, 0.336);
+    /* color: #fff; */
+}
+span{
+    margin-left: 10px;
+}
+
+.showMenu{
+    display: block;
+}
+.registerYLoginBar--login{
+    border: none;
+    margin-right: 30px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(102, 102, 102);
+    font-weight: 700;
+}
+.registerYLoginBar--register:hover{
+    color: #000;
+    border-color: #000;
+}
+.registerYLoginBar--register{  
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 700;
+    color: rgb(102, 102, 102);
+    border: 2px solid rgb(102, 102, 102);
+ 
+}
+.registerYLoginBar--login:hover{
+    color: #000;
+}
+
+.hamburgerMenu{
+    height: 20px;
+    display: none;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: content-box;
+    max-width: 100%;
+    
+
+}
+.content__articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 52em;
+    align-items: flex-start;
+    margin: 0px 100px 0px 8%
+}
+
+.content__articles--title{
+
+    font-size: 70px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 3em;
+}
+.content__articles--subtitle{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.content__articles--button{
+
+    width: 166px;
+    height: 53px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 100;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+
+}
+.content__articles--button:hover{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.content__articles--sponsors{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.content__articles--sponsors img:nth-child(1){
+  height: 20px;
+  align-self: center;
+  margin-right: 8px;
+}
+.content__articles--sponsors img:nth-child(3){
+    height: 20px;
+    align-self: center;
+    margin: 0px 8px;
+}
+.content__articles--sponsors img:nth-child(4){
+    height: 20px;
+    align-self: center;
+}
+
+
+
+.content__articles--sponsors--logo{
+    transform: scale(1);
+    float: left;
+}
+.imgAside{
+    height: 39em;
+    width: 34em;
+}
+.imgAside--img{
+    width: 100%;
+    height: auto;
+}
+
+.attribution{
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
+
+/* ########################  MEDIA QUERY #################### */
+
+
+@media screen and (max-width: 732px){
+  
+    .navBar{
+        
+        position: fixed;
+        padding-top: 7vh;
+        right: -100%;
+        width: 65%;
+        height: 100vh;
+        background-color: #fff;
+        top: 0px;
+        text-align: right;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 1;
+        transition: all 0.6s;   
+    }
+    .navBar--logo{
+        position: fixed;
+        left: 5%;
+        top: 15px;
+    }
+    .relleno{
+        flex-grow: 1;
+        align-self: center;
+    }
+    .registerYLoginBar{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 84px;
+    }
+    .registerYLoginBar--login{
+         
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #fff;
+        
+    }
+    .registerYLoginBar--register{
+        width: 100%;
+        height: 60px;
+        border-radius: 20px;
+        margin-top: 10px;
+        background-color: #fff;
+        
+    }
+    .navBar__element--dropMenuFeatures{
+        position: relative;
+        flex-direction: column;
+        top: 0px;
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        left: 5%;
+        background-color: #fff;
+        width: 100vh;
+        margin-top: 20px;
+        height: 170px;
+        
+    }
+    .navBar__element--dropMenuCompany{
+        position: relative;
+        flex-direction: column;
+        top: 0px;
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        left: 5%;
+        background-color: #fff;
+        width: 100vh;
+        margin-top: 20px;
+        height: 130px;
+        
+    }
+    a{
+        display: flex;
+        margin: 20px 0px;
+    }
+    span{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .navBar__elements{
+        margin-left: 10%;
+        margin-top: 12%;
+        font-size: 20px;
+    }
+    .hamburgerMenu{
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 18px;
+        z-index: 2;
+    }
+
+    .showMenuCell{
+        right: 0px;
+    }
+    .modeDark{
+        background-color: rgba(0, 0, 0, 0.708);
+        transition: all 0.6s;
+    }
+
+
+}

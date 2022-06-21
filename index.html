@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalizer.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <!-- ############################################### NAVBAR ###################################### -->
+  <nav>
+    <div class="navBar" >
+      <img class="navBar--logo" src="images/logo.svg" alt="logo snap">
+     
+      <div id="dropDown-features" class="navBar__elements" >
+        <div class="navBar__elements--element">
+          <h4 class="navBar__element--text"> Features </h4>
+          <img class="navBar__element--arrowFeatures" src="images/icon-arrow-down.svg" alt="arrowDown">
+        </div>
+        <div id="menu-features" class="navBar__element--dropMenuFeatures">
+            <a href="#"> 
+              <img src="images/icon-todo.svg" alt="">
+              <span> Todo List </span>
+            </a>
+            <a href="#">
+              <img src="images/icon-calendar.svg" alt="">   
+              <span> Calendar </span>
+            </a>
+            <a href="#">
+              <img src="images/icon-reminders.svg" alt="">
+              <span> Reminders </span>
+            </a>
+            <a href="#">
+              <img src="images/icon-planning.svg" alt="">
+              <span> Planning </span>
+            </a>
+        </div>
+      </div>
+     
+      <div  id="dropDown-company" class="navBar__elements" >
+        <div class="navBar__elements--element">
+          <h4 class="navBar__element--text" > Company </h4>
+          <img class="navBar__element--arrowCompany" src="images/icon-arrow-down.svg" alt="arrowDown">
+        </div>
+        <div id="menu-company" class="navBar__element--dropMenuCompany">
+          <a href="#"> History </a>
+          <a href="#"> Our Team </a>
+          <a href="#"> Blog </a>
+        </div>
+      </div>
+
+      <div class="navBar__elements" >
+        <h4 class="navBar__element--text" > Careers </h4>
+      </div>
+      <div class="navBar__elements" >
+        <h4 class="navBar__element--text" > About </h4>
+      </div>
+      <div class="relleno"></div>
+    </div>
+    <div class="registerYLoginBar" >
+        <button class="registerYLoginBar--login" > Login </button>
+        <button class="registerYLoginBar--register" > Register </button>
+    </div>
+    <img class="hamburgerMenu" src="images/icon-menu.svg" alt="">
+  </nav>
+  <!-- ###############################################  SECTION CONTENT ########################### -->
+  <section class="content" >
+    <div class="content__articles" >
+        <article class="content__articles--title" >
+                 <h1> Make <br> remote work </h1>
+        </article>
+        <article class="content__articles--subtitle">
+          <h3>
+            Get your team in sync, no matter your location.<br>
+            Streamline processes, create team rituals, and<br>
+            watch productivity soar.
+          </h3>
+        </article>
+        <button class="content__articles--button" >Learn more</button>
+        <div class="content__articles--sponsors" >
+          <img class="content__articles--sponsors--logo" src="images/client-databiz.svg" alt="logoDatabiz">
+          <img class="content__articles--sponsors--logo" src="images/client-audiophile.svg" alt="logo audioPhile">
+          <img class="content__articles--sponsors--logo" src="images/client-meet.svg" alt="logoMeet">
+          <img class="content__articles--sponsors--logo" src="images/client-maker.svg" alt="logoMaker">
+        </div>
+    </div>
+    <!-- #####################  ASIDE ########################### -->
+        <div class="imgAside" >
+          <img class="imgAside--img" src="images/image-hero-desktop.png" alt="imgHeroDesktop">
+        </div>
+  </section>
+  <!-- ################################################## FOOTER ########################################## -->
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#"> Ernesto Ruiz </a>.
+    </div>
+  </footer> -->
+  <script src="js/dropMenues.js"></script>
+  <script src="js/hamburgerMenu.js"></script>
+  <script src="js/tests.js"></script>
+</body>
+</html>
+
+
+
+
+
+ 
+
