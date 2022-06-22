@@ -20,7 +20,7 @@ nav{
 }
 .navBar--logo{
     margin-top: 6px;
-    margin-right: 20px;
+    margin-right: 59px;
 }
 .navBar__elements{
     display: flex;
@@ -86,6 +86,17 @@ span{
 
 .showMenu{
     display: block;
+}
+.relleno{
+    flex-grow: 1;
+    align-self: center;
+}
+.registerYLoginBar{
+
+}
+.spacer--nav{
+    flex-grow: 1;
+    align-self: center;
 }
 .registerYLoginBar--login{
     border: none;
@@ -247,7 +258,7 @@ span{
         top: 15px;
         width: 145px;
     }
-    .relleno{
+    .spacer--navBar{
         flex-grow: 1;
         align-self: center;
     }
@@ -336,6 +347,30 @@ span{
     }
 
 
+    .content__articles{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 39em;
+        align-items: center;
+        width: fit-content;
+        margin: 0px;
+    }
+    .content__articles--title{
+        margin: 0px;
+    }
+    .content__articles--title br{
+        display: none;
+    }
+    
+
+
+
+    .stablePosition{
+        position: fixed;
+    }
+
+
 }
 
 @media screen and (max-width: 900px){
@@ -348,6 +383,7 @@ span{
    }
    .imgAside{
        width: 100%;
+       height: fit-content;
    }
 
 }
