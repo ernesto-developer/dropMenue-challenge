@@ -42,11 +42,11 @@ window.addEventListener('resize', function(){
     if(window.innerWidth < 900){
        navbar.appendChild(registerMenu);
        imgAside.setAttribute("src", "images/image-hero-mobile.png");
-       nav.appendChild(imgLogo);
+    //    nav.appendChild(imgLogo);
     }else{
         nav.appendChild(registerMenu);
         imgAside.setAttribute("src", "images/image-hero-desktop.png");
-        navbar.appendChild(imgLogo);
+        // navbar.appendChild(imgLogo);
     }
     
     
@@ -55,11 +55,11 @@ window.addEventListener('resize', function(){
 
 if(window.innerWidth < 900){
     navbar.appendChild(registerMenu);
-    nav.appendChild(imgLogo);
+    // nav.appendChild(imgLogo);
     imgAside.setAttribute("src", "images/image-hero-mobile.png");
 }else{
     nav.appendChild(registerMenu);
     imgAside.setAttribute("src", "images/image-hero-desktop.png");
-    navbar.appendChild(imgLogo);
+    // navbar.appendChild(imgLogo);
 }
 

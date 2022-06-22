@@ -223,7 +223,7 @@ span{
 /* ########################  MEDIA QUERY #################### */
 
 
-@media screen and (max-width: 732px){
+@media screen and (max-width: 900px){
   
     .navBar{
         
