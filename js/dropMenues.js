@@ -18,15 +18,29 @@ the id of the dropdown menu, the menu is shown and the arrow is changed to an up
 not equal to the id of the dropdown menu, the menu is hidden and the arrow is changed to a down
 arrow. */
  window.addEventListener('click', function(e){
-        for(let i = 0; i < e.path.length; i++){
+      labelDePrueba:  for(let i = 0; i < e.path.length; i++){
             const nodeId = e.path[i];
-            if(nodeId.id === 'dropDown-company'){
+            console.log(menuCompany.classList.contains("showMenu"));
+            if(nodeId.id === 'dropDown-company' && !menuCompany.classList.contains("showMenu")){
+                
                 menuCompany.classList.add('showMenu');
                 arrowCompany.setAttribute('src', 'images/icon-arrow-up.svg');
                 menuFeatures.classList.remove('showMenu');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-down.svg');
-                break;
-            }else
+                //console.log("lo contiene");
+                break labelDePrueba;
+                
+                
+            }
+            else 
+            if(nodeId.id === 'dropDown-company' && menuCompany.classList.contains("showMenu")){
+                menuCompany.classList.remove('showMenu');
+                
+            
+            
+                break labelDePrueba;
+            }
+            else
             if(nodeId.id === 'dropDown-features'){
                 menuFeatures.classList.add('showMenu');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-up.svg');
@@ -36,9 +50,10 @@ arrow. */
             }else
             if(nodeId.id !== 'dropDown-company' || nodeId.id !== 'dropDown-features'){
                 menuFeatures.classList.remove('showMenu');
-                menuCompany.classList.remove('showMenu');
+                //menuCompany.classList.remove('showMenu');
                 arrowCompany.setAttribute('src', 'images/icon-arrow-down.svg');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-down.svg');
+               // console.log("entre al defeault");
             }
         }
     }   , true);
