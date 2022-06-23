@@ -239,7 +239,7 @@ span{
         position: absolute;
         left: 5%;
         top: 15px;
-        width: 145px;
+        width: 118px;
     }
     .spacer--navBar{
         flex-grow: 1;
@@ -316,8 +316,8 @@ span{
         right: 5%;
         top: 23px;
         z-index: 2;
-        width: 50px;
-        height: 34px;
+        width: 40px;
+        height: 26px;
     }
 
     .showMenuCell{
@@ -329,7 +329,7 @@ span{
     }
     .content{
         flex-direction: column-reverse;
-        margin-top: 6em;
+        margin-top: 8em;
     }
     .content__articles{
         display: flex;
