@@ -11,51 +11,49 @@ const imgLogo = document.querySelector(".navBar--logo");
 const imgAside = document.querySelector(".imgAside--img");
 
 
-/* The above code is adding an event listener to the window. The event listener is listening for a
-click event. When the click event is triggered, the function is executed. The function is looping
-through the event path and checking the id of each element in the event path. If the id is equal to
-the id of the dropdown menu, the menu is shown and the arrow is changed to an up arrow. If the id is
-not equal to the id of the dropdown menu, the menu is hidden and the arrow is changed to a down
-arrow. */
+/* The above code is adding an event listener to the window object. The event listener is listening for
+a click event. When the click event is fired, the function is executed. The function is checking the
+id of the element that was clicked. If the id is equal to dropDown-company, then the menuCompany
+class is added to the element. If the id is equal to dropDown-features, then the menuFeatures class
+is added to the element. If the id is not equal to dropDown-company or dropDown-features, then the
+menuCompany and menuFeatures classes are removed from */
  window.addEventListener('click', function(e){
-      labelDePrueba:  for(let i = 0; i < e.path.length; i++){
-            const nodeId = e.path[i];
-            console.log(menuCompany.classList.contains("showMenu"));
-            if(nodeId.id === 'dropDown-company' && !menuCompany.classList.contains("showMenu")){
-                
+
+        const nodeId = e.path[2];
+
+             if(nodeId.id === 'dropDown-company' && !menuCompany.classList.contains("showMenu")){
                 menuCompany.classList.add('showMenu');
                 arrowCompany.setAttribute('src', 'images/icon-arrow-up.svg');
                 menuFeatures.classList.remove('showMenu');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-down.svg');
-                //console.log("lo contiene");
-                break labelDePrueba;
-                
-                
             }
             else 
             if(nodeId.id === 'dropDown-company' && menuCompany.classList.contains("showMenu")){
                 menuCompany.classList.remove('showMenu');
+                arrowCompany.setAttribute('src', 'images/icon-arrow-down.svg');
                 
-            
-            
-                break labelDePrueba;
             }
             else
-            if(nodeId.id === 'dropDown-features'){
+            if(nodeId.id === 'dropDown-features' && !menuFeatures.classList.contains("showMenu")){
                 menuFeatures.classList.add('showMenu');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-up.svg');
                 menuCompany.classList.remove('showMenu');
                 arrowCompany.setAttribute('src', 'images/icon-arrow-down.svg');
-                break;
-            }else
-            if(nodeId.id !== 'dropDown-company' || nodeId.id !== 'dropDown-features'){
+                
+            }else 
+            if(nodeId.id === 'dropDown-features' && menuFeatures.classList.contains("showMenu")){
+                menuFeatures.classList.remove("showMenu");
+                arrowFeatures.setAttribute('src', 'images/icon-arrow-down.svg');
+               
+            }
+            else
+            if(nodeId.id !== 'dropDown-company' || nodeId.id !== 'dropDown-features')
+            {
                 menuFeatures.classList.remove('showMenu');
-                //menuCompany.classList.remove('showMenu');
+                menuCompany.classList.remove('showMenu');
                 arrowCompany.setAttribute('src', 'images/icon-arrow-down.svg');
                 arrowFeatures.setAttribute('src', 'images/icon-arrow-down.svg');
-               // console.log("entre al defeault");
             }
-        }
     }   , true);
 
 
